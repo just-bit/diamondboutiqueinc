@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /*.js*
+Allow: /*.css*
+Allow: /*.png*
+Allow: /*.jpg*
+Allow: /*.gif*
+Allow: /*.webp*
+Disallow: /admin
+Disallow: /wp-admin
+Disallow: /user
+Disallow: /search
+Disallow: /login
+Disallow: /?orderby*
+Disallow: /feed*
+Disallow: /*add-to-cart=*
+Disallow: /*?add-to-cart=*
+Disallow: /wp-content/plugins/woocommerce-products-filter/
+Disallow: /*?utm_source*
+
+Sitemap: https://www.karatshop.com/sitemap.xml

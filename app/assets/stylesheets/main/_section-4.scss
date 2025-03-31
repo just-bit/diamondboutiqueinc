@@ -1,0 +1,237 @@
+.collections-section {
+	margin-top: 13px;
+	padding-top: 89px;
+	padding-bottom: 91px;
+	background-color: $light;
+	@include bp(xs) {
+		padding-top: 52px;
+		padding-bottom: 70px;
+	}
+}
+
+.collections-section__title {
+	margin: 0;
+	margin-bottom: 20px;
+	font-family: $crimson;
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	color: $black;
+	@include bp(xs) {
+		font-size: 32px;
+		margin-bottom: 19px;
+	}
+}
+
+.collections-section__wrapper {
+	display: flex;
+	gap: 20px;
+	@include bp(md) {
+		gap: 10px;
+	}
+	@media (max-width: 850px) {
+		flex-direction: column;
+		@include bp(xs) {
+			gap: 0;
+		}
+	}
+
+	a {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		border-radius: 20px;
+		overflow: hidden;
+		text-decoration: none !important;
+
+		&:hover {
+			img, picture {
+				transform: scale(1.1);
+			}
+		}
+
+		picture {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			transition: ease-in-out 0.4s;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: ease-in-out 0.4s;
+		}
+
+		.btn {
+			position: relative;
+			min-width: auto;
+			box-shadow: inset 0 0 0 1px #fff;
+
+			&:hover {
+				> span {
+					transform: translate(0, 0);
+				}
+			}
+
+			span {
+				border: 1px solid #fff !important;
+				background-color: #fff;
+				color: $black;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.collections-all {
+	>a {
+		width: 375px;
+		height: 100%;
+		padding: 30px;
+		@media (max-width: 850px) {
+			width: 100%;
+			aspect-ratio: 375/380;
+		}
+		@include bp(xs) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 5%;
+			justify-content: center;
+		}
+	}
+
+	.btn {
+		height: 40px;
+		margin-left: 7px;
+		@include bp(xs) {
+			left: -50%;
+			transform: translateX(calc(50% + (21vw - 30px))) translateY(-2vw);
+		}
+		> span {
+			gap: 5px;
+			padding-left: 32px;
+			padding-right: 27px;
+			transform: translate(-5px, -4px);
+		}
+	}
+}
+
+
+.collections-all__text {
+	position: relative;
+	max-width: 250px;
+	margin-bottom: 19px;
+	color: #FFF;
+	font-family: $crimson;
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	text-transform: uppercase;
+	@include bp(xs) {
+		left: -50%;
+		transform: translateX(calc(50% + (21vw - 30px))) translateY(-2vw)
+	}
+}
+
+.collections-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+	flex-grow: 1;
+	@include bp(md) {
+		gap: 10px;
+	}
+	@include bp(xs) {
+		display: flex;
+		overflow-x: auto;
+		width: calc(100% + 15px);
+		padding-right: 15px;
+		padding-bottom: 30px;
+		margin-top: 20px;
+		@media (hover: hover) {
+			&::-webkit-scrollbar {
+				overflow-x: scroll;
+				background: transparent;
+				height: 2px;
+				transition: linear .2s;
+				box-shadow: none;
+				border-bottom: 1px solid rgba($black, .1);
+			}
+			&::-webkit-scrollbar-thumb {
+				background: $black;
+				border-radius: 0;
+				height: 2px;
+			}
+		}
+		@media (pointer: coarse) {
+			padding-bottom: 15px;
+		}
+	}
+	a {
+		height: 180px;
+		padding-bottom: 13px;
+		@include bp(xs) {
+			width: calc(50vw - 20px);
+			min-width: calc(50vw - 20px);
+			height: calc(50vw - 8px);
+		}
+		.btn {
+			align-self: center;
+			margin-top: auto;
+			height: 30px;
+			@include bp(xs) {
+				min-width: 110px;
+				transform: translateX(5px);
+			}
+			span {
+				max-width: auto;
+				padding: 0 20px;
+				transform: translate(-5px, -5px);
+				@include bp(xxs) {
+					padding: 0 8px;
+				}
+			}
+		}
+	}
+}
+
+.collections-section {
+	@media (pointer: coarse) {
+		padding-bottom: 40px;
+	}
+}
+
+.collections-section__bg-text {
+	margin-top: 2px;
+	margin-right: 28px;
+	color: $black;
+	font-family: $windsong;
+	font-size: 80px;
+	font-style: normal;
+	text-align: right;
+	font-weight: 400;
+	line-height: normal;
+	opacity: 0.1;
+	@include bp(md) {
+		font-size: 66px;
+	}
+	@include bp(xs) {
+		display: none;
+	}
+}

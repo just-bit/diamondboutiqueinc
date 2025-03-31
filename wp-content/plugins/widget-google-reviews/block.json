@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 3,
+    "name": "widget-google-reviews/reviews",
+    "title": "Google Reviews Block",
+    "category": "widgets",
+    "icon": "star-filled",
+    "description": "Block for Google map reviews. Easy way to show your Google place reviews on WordPress pages!",
+    "textdomain": "widget-google-reviews",
+    "editorScript": "file:./build/index.js",
+    "attributes": {
+        "place_id": {
+            "type": "string"
+        },
+        "place_lang": {
+            "type": "string"
+        }
+    }
+}

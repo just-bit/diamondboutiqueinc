@@ -1,0 +1,125 @@
+.collection-section {
+	position: relative;
+	margin-top: 173px;
+	padding-top: 115px;
+	padding-bottom: 71px;
+	background-color: $light;
+	@include bp(xs) {
+		margin-top: 100px;
+		padding-top: 80px;
+		padding-bottom: 46px;
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 1px;
+		height: 140px;
+		position: absolute;
+		top: -88px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $black;
+		@include bp(xs) {
+			height: 60px;
+			top: -20px;
+		}
+	}
+}
+
+.collection-section__title {
+	display: block;
+	margin: 0;
+	margin-bottom: 30px;
+	font-family: $crimson;
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	text-align: center;
+	color: $black;
+	@include bp(xs) {
+		font-size: 32px;
+	}
+}
+
+.collection-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+	gap: 10px 30px;
+	@include bp(xs) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+}
+
+.collection-item {
+	color: $black;
+	text-decoration: none;
+
+	&:hover {
+		.collection-item__pic {
+			picture {
+				transform: scale(1.1);
+			}
+
+			img {
+				transform: scale(1.1);
+			}
+		}
+
+		.collection-item__title {
+			color: rgba($black, 0.6);
+		}
+	}
+}
+
+.collection-item__pic {
+	height: 190px;
+	border-radius: 20px;
+	background-color: #fff;
+	padding: 25px 22px;
+	overflow: hidden;
+
+	picture {
+		width: 100%;
+		height: 100%;
+		transition: ease 0.3s;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		transition: ease 0.3s;
+	}
+}
+
+.collection-item__title {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 76px;
+	margin: 0;
+	font-family: $crimson;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+	line-height: 1;
+	text-transform: uppercase;
+	color: $black;
+	transition: ease 0.3s;
+	@include bp(xs) {
+		height: auto;
+		align-items: flex-start;
+		margin-top: 15px;
+		margin-bottom: 19px;
+	}
+}

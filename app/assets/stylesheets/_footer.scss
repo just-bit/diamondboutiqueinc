@@ -1,0 +1,471 @@
+.footer {
+	background-color: $light;
+	position: relative;
+
+	> img {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		//width: 48.4vw;
+		width: calc(49vw - 1px);
+		object-fit: cover;
+		min-width: 320px;
+		@include bp(md) {
+			width: 100vw;
+			height: 460px;
+		}
+		@media only screen and (min-width: 0) and (max-width: 575px) {
+			height: 336px;
+		}
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.footer-wrapper {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
+
+.footer-left {
+	position: relative;
+	padding: 106px 0 30px;
+
+	@include bp(xs) {
+		padding: 50px 0 16px;
+	}
+	@include bp(md) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 0;
+	}
+}
+
+.footer-title {
+	display: block;
+	font-family: $windsong;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%;
+	margin-bottom: 35px;
+	max-width: 465px;
+	@include bp(xs) {
+		font-size: 30px;
+		line-height: 100%;
+		margin-bottom: 28px;
+	}
+}
+
+.footer-menu__wrapper {
+	width: 452px;
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	@include bp(md) {
+		width: 450px;
+	}
+	@include bp(xs) {
+		gap: 5px;
+	}
+}
+
+.footer-menu {
+	> span {
+		display: block;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 100%;
+		text-transform: uppercase;
+		margin-bottom: 13px;
+	}
+
+	> ul {
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1.35;
+
+		> li {
+			> a {
+				display: block;
+				color: $black;
+				text-decoration: none;
+				opacity: .6;
+				padding-bottom: 8px;
+
+				&:hover, &:focus {
+					color: $black;
+					text-decoration: none;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.footer-bot {
+	display: flex;
+	align-items: center;
+	margin-top: 83px;
+	@include bp(xs) {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-top: 64px;
+		width: 100%;
+	}
+}
+
+.footer-logo {
+	display: flex;
+	width: 203px;
+	height: 24px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.footer-copyright {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-left: 54px;
+	@include bp(xs) {
+		margin-top: 7px;
+		margin-left: 0;
+	}
+}
+
+.footer-right {
+	padding-left: 100px;
+	position: relative;
+	top: 26px;
+	@include bp(lg) {
+		padding-left: 30px;
+	}
+	@include bp(md) {
+		height: 460px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		top: auto;
+	}
+	@media only screen and (min-width: 0) and (max-width: 991px) {
+		padding: 0;
+	}
+	@media only screen and (min-width: 0) and (max-width: 575px) {
+		height: 336px;
+	}
+}
+
+.footer-subscription {
+	max-width: 470px;
+	@include bp(md) {
+		width: 450px;
+		max-width: 100%;
+	}
+	@include bp(xs) {
+		margin-top: -14px;
+	}
+
+	> span {
+		display: block;
+		color: #fff;
+		font-family: $crimson;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+		margin-bottom: 16px;
+		@include bp(xs) {
+			font-size: 30px;
+			margin-bottom: 24px;
+		}
+	}
+
+	form {
+		width: 100%;
+		display: flex;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		position: relative;
+
+		&.error {
+			border-color: $light;
+
+			input {
+				color: $light;
+
+				&::placeholder {
+					color: transparent;
+				}
+			}
+
+			button {
+				svg {
+					path {
+						fill: $light;
+					}
+				}
+			}
+		}
+
+		input {
+			border: none;
+			background: transparent;
+			width: 100%;
+			padding: 9px 30px 9px 0;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			color: #fff;
+			caret-color: $light !important;
+
+			&:-webkit-autofill,
+			&:-webkit-autofill:focus,
+			&:-webkit-autofill:hover {
+				-webkit-text-fill-color: #fff;
+				-webkit-box-shadow: inset 0 0 0 1000px transparent;
+				caret-color: #fff;
+			}
+
+			&::placeholder {
+				color: #fff;
+			}
+
+			&:focus {
+				&::placeholder {
+					color: transparent;
+				}
+			}
+
+			@supports (-webkit-touch-callout: none) {
+				font-size: 16px;
+			}
+
+			&:focus {
+				@supports (-webkit-touch-callout: none) {
+					font-size: 16px;
+				}
+			}
+		}
+
+		button {
+			position: absolute;
+			right: 0;
+			top: 1px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 25px;
+			height: calc(100% - 2px);
+			padding: 1px;
+			background: transparent;
+			border: none;
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+
+		label {
+			&.error {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				color: $light;
+				right: 0;
+				left: auto;
+				top: calc(100% + 5px);
+				font-size: 11px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				outline: none;
+
+				&:before {
+					content: "!";
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+					flex-shrink: 0;
+					margin-right: 4px;
+					width: 12px;
+					height: 12px;
+					font-size: 9px;
+					text-align: center;
+					border-radius: 2px;
+					background-color: $light;
+					color: $red;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	button {
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+.footer-socials {
+	display: flex;
+	margin-top: 40px;
+	@include bp(md) {
+		width: 450px;
+		max-width: 100%;
+		@include bp(xs) {
+			padding-left: 7px;
+		}
+	}
+
+	li {
+		display: flex;
+		margin-right: 15px;
+
+		a {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+}
+
+
+.go-top {
+	position: fixed;
+	left: 30px;
+	bottom: 75px;
+	width: 40px;
+	height: 40px;
+	z-index: 100;
+	cursor: pointer;
+	pointer-events: all;
+	background-image: url('/wp-content/themes/thekaratshop/images/icons/go-top.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include bp(xs) {
+		bottom: 130px;
+		left: 15px;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	@include bp(xs) {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+#woof_html_buffer {
+	//font-size: 0 !important;
+	//background-color: transparent !important;
+	background-image: url('/wp-content/themes/thekaratshop/images/icons/spinner.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 160px 70px;
+	background-color: transparent !important;
+	box-shadow: none !important;
+	color: transparent !important;
+	opacity: 1;
+}
+
+.cdp-copy-alert-success {
+	pointer-events: none !important;
+}
+
+// triplefork
+
+.triplefork-wrapper {
+	@include bp(md) {
+		width: 100vw;
+		margin-top: 16px;
+		margin-left: 0;
+		background-color: #fff;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.triplefork {
+	position: absolute;
+	bottom: 25px;
+	right: -454px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-top: 20px;
+	padding: 5px 12px;
+	padding-right: 15px;
+	text-decoration: none !important;
+	background-color: $light;
+	transition: ease 0.3s;
+	border-radius: 50px;
+	@include bp(lg) {
+		right: -376px;
+	}
+	@include bp(md) {
+		position: static;
+		margin-top: 4px;
+		padding-bottom: 24px;
+		background-color: #fff;
+		border-radius: 0;
+	}
+	@include bp(xs) {
+		width: 100%;
+		padding-bottom: 8px;
+	}
+
+	&:hover {
+		background-color: #fff;
+		@include bp(md) {
+			background-color: #fff;
+			opacity: 0.7;
+		}
+	}
+
+	span {
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		color: $black;
+	}
+}
+
+#podium-bubble, #podium-prompt {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease-in-out;
+}
+
+

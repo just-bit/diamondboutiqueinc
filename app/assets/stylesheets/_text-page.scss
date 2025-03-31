@@ -1,0 +1,80 @@
+.text-page {
+	.page-top {
+		@include bp(xs) {
+			min-height: 100px;
+		}
+	}
+}
+
+.text-page__main {
+	padding: 90px 0;
+	@include bp(xs) {
+		padding: 13px 0 78px;
+	}
+}
+
+.text-page__inner {
+	max-width: 870px;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+
+	h2, h3 {
+		font-family: $crimson;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+		margin: 20px 0 10px;
+		@include bp(xs) {
+			margin: 23px 0 10px;
+			font-size: 21px;
+		}
+	}
+
+	ul {
+		padding-left: 24px;
+		@include bp(xs) {
+			padding-left: 26px;
+		}
+
+		li {
+			list-style-type: disc;
+		}
+	}
+
+	ol {
+		padding-left: 24px;
+		@include bp(xs) {
+			padding-left: 26px;
+		}
+		li {
+			list-style-type: decimal;
+		}
+	}
+
+	a {
+		color: $black;
+		text-decoration: underline;
+		text-decoration-thickness: from-font;
+
+		&:hover {
+			color: $black;
+			text-decoration: none;
+			opacity: .6;
+		}
+	}
+
+	> * {
+		margin-bottom: 10px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

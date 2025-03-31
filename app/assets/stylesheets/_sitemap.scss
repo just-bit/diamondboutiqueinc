@@ -1,0 +1,43 @@
+.wsp-container {
+	--bs-gutter-x: 1.5rem;
+	width: 1195px;
+	max-width: calc(100% - 30px);
+	padding-right: calc(1.5rem* .5);
+	padding-right: calc(var(--bs-gutter-x)* .5);
+	padding-left: calc(1.5rem* .5);
+	padding-left: calc(var(--bs-gutter-x)* .5);
+	margin-right: auto;
+	margin-left: auto;
+	@include bp(lg) {
+		width: 100%;
+		max-width: 100%;
+		padding: 0 15px;
+	}
+	.wsp-products-list, .wsp-product_cats-list{
+		columns: 2;
+		@include bp(sm) {
+			columns: 1;
+		}
+	}
+}
+
+.sitemap-wrapper, .wsp-container{
+	padding-top: 40px;
+	line-height: 25px;
+	>ul{
+		@include bp(xs) {
+			font-size: 14px;
+		}
+		li{
+			a{
+				display: block;
+				color: $gray;
+				text-decoration: none;
+				&:hover, &:focus{
+					color: $black;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
