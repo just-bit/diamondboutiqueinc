@@ -52,11 +52,11 @@
 					<div class="footer-bot">
               <?php if (is_front_page()): ?>
 								<span class="footer-logo">
-                           <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" loading="lazy" style="object-position: left;" alt="Diamonds & Jewelry Store in Port Washington" title="Diamonds & Jewelry Store in New York" width="203" height="24">
+                           <img src="<?php echo get_template_directory_uri() ?>/images/logo.svg" loading="lazy" style="object-position: left;" alt="Diamonds & Jewelry Store in Port Washington" title="Diamonds & Jewelry Store in New York" width="203" height="24">
                         </span>
               <?php else: ?>
 								<a href="/" class="footer-logo">
-									<img src="<?php echo get_template_directory_uri() ?>/images/logo.png" loading="lazy" style="object-position: left;" alt="Diamonds & Jewelry Store in Port Washington" title="Diamonds & Jewelry Store in New York" width="203" height="24">
+									<img src="<?php echo get_template_directory_uri() ?>/images/logo.svg" loading="lazy" style="object-position: left;" alt="Diamonds & Jewelry Store in Port Washington" title="Diamonds & Jewelry Store in New York" width="203" height="24">
 								</a>
               <?php endif; ?>
 						<span class="footer-copyright">© <?= date("Y"); ?> by Diamond Boutique. All rights reserved</span>

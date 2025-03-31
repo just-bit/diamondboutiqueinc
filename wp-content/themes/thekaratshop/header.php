@@ -156,11 +156,11 @@
 			</div>
         <?php if (is_front_page()): ?>
 					<span class="header__main-logo">
-		        <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="Diamonds & Jewelry Store in Port Washington" title="Diamonds & Jewelry Store in New York" width="245" height="30" decoding="async" fetchpriority="high">
+		        <img src="<?php echo get_template_directory_uri() ?>/images/logo.svg" alt="Diamonds & Jewelry Store in Port Washington" title="Diamonds & Jewelry Store in New York" width="245" height="30" decoding="async" fetchpriority="high">
             </span>
         <?php else: ?>
 					<a href="/" class="header__main-logo">
-						<img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="Diamonds & Jewelry Store in Port Washington" title="Diamonds & Jewelry Store in New York" width="245" height="30" decoding="async" fetchpriority="high">
+						<img src="<?php echo get_template_directory_uri() ?>/images/logo.svg" alt="Diamonds & Jewelry Store in Port Washington" title="Diamonds & Jewelry Store in New York" width="245" height="30" decoding="async" fetchpriority="high">
 					</a>
         <?php endif; ?>
 			<div class="header__main-menu">

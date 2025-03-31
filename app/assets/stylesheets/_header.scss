@@ -93,11 +93,11 @@
 .header__main-logo {
 	display: flex;
 	text-decoration: none;
-	width: 245px;
+	width: 170px;
 	margin-right: 10px;
 	@include bp(md) {
-		width: 174px;
-		height: 22px;
+		width: 95px;
+		height: 45px;
 	}
 
 	> picture {

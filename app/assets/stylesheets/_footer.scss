@@ -127,7 +127,7 @@
 .footer-logo {
 	display: flex;
 	width: 203px;
-	height: 24px;
+	height: 68px;
 
 	img {
 		width: 100%;
@@ -368,8 +368,11 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+	@media screen and (max-width: 1199px) {
+		bottom: 100px;
+	}
 	@include bp(xs) {
-		bottom: 130px;
+		bottom: 97px;
 		left: 15px;
 	}
 
